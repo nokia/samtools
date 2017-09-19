@@ -42,13 +42,13 @@ $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml
 ```
 
 Some more options:
-Use option "--secure" if SAM security (certificate based) is enabled.
-Use option "--md5" if SAM user password is already md5 hashed.
-Use option "--csv" to define output CSV file name (default is [classname].csv)
-Use option "--help" to get some usage information
-Use option "--delay" to slow down batch execution
-Use option "--result -1" to define the XML hierarchy level to determine objects
-Use option "--separator" to specify the delimiter used in CSV files
-Use option "--interactive" to prompt interactively for username and password
-Use option "--logfile -" to write log 
+* Use option "--secure" if SAM security (certificate based) is enabled.
+* Use option "--md5" if SAM user password is already md5 hashed.
+* Use option "--csv" to define output CSV file name (default is [classname].csv)
+* Use option "--help" to get some usage information
+* Use option "--delay" to slow down batch execution
+* Use option "--result -1" to define the XML hierarchy level to determine objects
+* Use option "--separator" to specify the delimiter used in CSV files
+* Use option "--interactive" to prompt interactively for username and password
+* Use option "--logfile -" to write log 
 
