@@ -18,24 +18,25 @@ $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class netw.TopologyGroup --
 $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class trapmapper.AlarmCatalogue --children
 
 ```
-After reviewing the CSV files, it is possible to use the items contained as input for a batch request against Nokia NSP. For this, an XML file needs to be specified. Every row of the CSV file is used to fill the XMLAPI template and is executed:
+After reviewing/changing the CSV files they can be used for running batch requests against Nokia NSP.
+An XML file needs to be specified. Every data row of the CSV file is used to fill the XMLAPI template and is executed:
 
-1) Simple Request
+3) Simple Request
 ```
 $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml xml\modEpipe.xml
 ```
 
-2) Combine Find/Execute in one request (no need for CSV)
+4) Combine Find/Execute in one request (no need for CSV)
 ```
 $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class epipe.Epipe --xml xml\modEpipe.xml
 ```
 
-3) Improve performance using bulk size
+5) Improve performance using bulk size
 ```
 $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml xml\modEpipe.xml --bulksize 100 --warn
 ```
 
-4) Store failed objects in another CSV file
+6) Store failed objects in another CSV file
 ```
 $ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml xml\modEpipe.xml --store
 
@@ -51,4 +52,3 @@ Some more options:
 * Use option "--separator" to specify the delimiter used in CSV files
 * Use option "--interactive" to prompt interactively for username and password
 * Use option "--logfile -" to write log 
-
