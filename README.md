@@ -7,15 +7,15 @@ The csvtool can be used for automation use-cases using SAM-O.
 
 1) Find Requests (using XML)
 ```
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --xml findEpipe.xml
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --xml findEpipe.xml
 ```
 
 2) Find Requests (using class name, filters and result filters)
 ```
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class epipe.Epipe
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class security.Span --filter "spanId>9"
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class netw.TopologyGroup --filter "<filter><and><equal name='application' value='sam'/><not><wildcard name='description' value='Default%%'/></not><notEqual name='displayedName' value='UnmanagedNEs'/></and></filter>"
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class trapmapper.AlarmCatalogue --children
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --class epipe.Epipe
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --class security.Span --filter "spanId>9"
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --class netw.TopologyGroup --filter "<filter><and><equal name='application' value='sam'/><not><wildcard name='description' value='Default%%'/></not><notEqual name='displayedName' value='UnmanagedNEs'/></and></filter>"
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --class trapmapper.AlarmCatalogue --children
 
 ```
 After reviewing/changing the CSV files they can be used for running batch requests against Nokia NSP.
@@ -23,22 +23,22 @@ An XML file needs to be specified. Every data row of the CSV file is used to fil
 
 3) Simple Request
 ```
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml xml\modEpipe.xml
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --batch epipe.Epipe.csv --xml xml\modEpipe.xml
 ```
 
 4) Combine Find/Execute in one request (no need for CSV)
 ```
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --class epipe.Epipe --xml xml\modEpipe.xml
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --class epipe.Epipe --xml xml\modEpipe.xml
 ```
 
 5) Improve performance using bulk size
 ```
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml xml\modEpipe.xml --bulksize 100 --warn
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --batch epipe.Epipe.csv --xml xml\modEpipe.xml --bulksize 100 --warn
 ```
 
 6) Store failed objects in another CSV file
 ```
-$ csvtool.py -s 10.0.0.1 -u SamOClient -p 5620Sam! --batch epipe.Epipe.csv --xml xml\modEpipe.xml --store
+$ csvtool.py -s 10.0.0.1 -u NbiUser -p p@ssw0rD --batch epipe.Epipe.csv --xml xml\modEpipe.xml --store
 
 ```
 
