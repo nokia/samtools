@@ -164,7 +164,7 @@ class SamConnection:
                   '</security><requestID>PythonClient:' + str(requestId) + \
                   '</requestID></header></SOAP:Header><SOAP:Body>' + \
                   xmlapi + '</SOAP:Body></SOAP:Envelope>'
-        return xml.dom.minidom.parseString(request).toprettyxml()
+        return xml.dom.minidom.parseString(request).toxml()
 
     @staticmethod
     def isActive(samserver="http://SamOClient:5620Sam!@172.23.81.20"):
