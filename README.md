@@ -52,3 +52,8 @@ Some more options:
 * Use option "--separator" to specify the delimiter used in CSV files
 * Use option "--interactive" to prompt interactively for username and password
 * Use option "--logfile -" to write log 
+
+
+## License
+
+This project is licensed under the BSD-3-Clause license - see the [LICENSE](https://github.com/nokia/samtools/blob/master/LICENSE).
